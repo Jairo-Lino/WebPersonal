@@ -1,0 +1,531 @@
+body {
+margin: 0; /* margen cero dl cuerpo de la pagina  */
+font-family: 'Poppins', sans-serif; /* font-family es el tipo de letra para la pagina, 'Poppins' sacado de google y sans-serif es la tuta */
+  }
+
+header .contenedor { /* las clases se llaman con un punto (.), pueden aver muchas clases en html */
+display: flex; /* permite convertir los elementos en cajas flexibles uno al lado del otro*/
+justify-content: space-between; /* Justifica los contenidos en los espacios */
+  }
+
+header ul { /* llamar a ul del html o tambien se puede usar la clase */
+display: flex;
+}
+
+header ul li {
+  list-style: none; /* ningun estilo en la lista osea el punto al inicio de la palabra de cada menu */
+  margin-right: 15px; /* permite separar las lineas hacia la derecha a 15px*/
+}
+
+a {
+text-decoration: none; /* permite sacar el subrayado de los link que esta en la etiqueta a */
+}
+
+.contenedor{
+max-width: 1280px; /* maxio ancho 1280px*/
+width: 90%; /* ancho de 90%*/
+margin: auto; /* margen automatico acorde del marge padre establecido*/
+}/* aplicar el contenedor para que los menus esten adecuado*/
+
+header{/* linear-gradient() degradado para la imagen de fondo, rgb es codigo del color de html y "a" es alfa osea es transparencia ejem el .6 */
+background:linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)), url(../imagenes/fondo1.jpg); /* poner una imagen de fondo, punto punto barra permite volver hacia atras*/
+height: 100vh ; /*height 100vh la imagen ocupa toda la pantalla el 100%*/
+/*background-size: cover; /* adapta la imagen acorde el ancho de la pantalla*/
+background-size:100% 100%; /* Segun Lino q la imagen este completo en la pantalla*/
+}
+
+#contenedor-titulo-flex {
+  display: flex;
+  justify-content: center; /* justificar el contenedor h1 y h2 y centrar */
+  margin: 18vh 0; /* 18vh que baje 18% de la ventana ademas corresponde a margin top y bottom,  y el cero corresponde a margin right y left*/
+  width: 100%; /*para q el titulo y el subtitulo ste centrado*/
+}
+
+
+h1{
+font-size: 60px; /* tamaño de fuente de 60px */
+color: #fff; /* #fff es color blanco */
+margin: 0;
+}
+
+h2{
+font-size: 25px;
+color: #fff;
+}
+
+.contenedor-titulo {
+  text-align: center;/* centrar al botton y a h1   */
+  }
+
+  /* (, #sobre-mi a y #blog a) toda esta propiedad css que se me aplique tanto en a contenedor-titulo y sobre-mi y en blog    */
+.contenedor-titulo a, #sobre-mi a, #blog a, #que-esperas a, #contacto input[type="submit"] { /* a es un elemnto en linea y no pueden ser manipulados como con los titulares como h1, h2, p son elemntos de bloque y son manipulados x muchas maneras */
+  font-size: 14px;
+  color: #fff;  /* Color de la letra del button */
+  background:#00babe ; /* Color del button verde #006e2e */
+  padding: 14px 24px; /* agranda el tamaño del buttton padding:espaciado interno del elemento que pertenece a top y botto de 14px y margin es exterior pertenece a right y left de 24px */
+  border-radius: 20px; /* Permite que el button este ovalado  */
+  display: inline-block; /*permite convertirlos en elementos de bloque y asi poder manipularlos con margin y padding*/
+  transition: 0.5s; /* tiempo de transicion */
+  font-weight: bold; /* permite q este en negrita */
+}
+
+.contenedor-titulo a:hover, #sobre-mi a:hover, #blog a:hover, #que-esperas a:hover, #contacto input[type="submit"]:hover { /* al pasar el mouse en el button se cambie de color */
+    background: #000000;
+    color: #ffce00;
+    transition: 0.5s;  /*tiempo de transicion */
+}
+
+/*SECCION MENU*/
+/* menu principal de color blanco*/
+.lista-menu {
+  padding: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  transition: 0.5s;
+  }
+
+  nav ul li a:hover { /*hover es cuando pasas con el mouse al elemento de menu se cambia de color*/
+    color: #ffce00!important;
+    transition: 0.5s;
+  }
+
+  /* SECCION LOGO    transition: .4s; */
+  /* p.logo { el p con la clase logo es otra forma de llamar en css por etiqueta, clase o id; estamos llamando a un p con el elemento logo */
+  /*font-size: 20px;
+    color: #fff;
+  }/*SEGUN EL TEACHER*/
+  div.logo { /*SEGUN LINO*/
+    width: auto;
+    float: left;
+    margin-left: 20px;
+  }
+   div.logo img {
+    width: 20%;
+  }
+
+/* SECCION DE SOBRE MI   */
+h3{
+  text-align: center;
+  font-size: 55px;
+  font-weight:normal; /* font weignt es el peso de la fuente, normal es la letra normal y bold es negrita,   */
+}
+
+#sobre-mi .contenedor-sobremi{
+  display: flex;
+  justify-content: space-around;
+}
+
+#sobre-mi .texto{
+width: 42%; /*width tamaño de largo del parrafo del texto ejm 42% abarca casi la mitad*/
+text-align: justify; /*<!--text-align: justify; permite Justificar todo el parrafo q sta dentro de la clase texto -->*/
+}
+/*FIN SECCION DE SOBRE MI */
+
+/* SECCION DE SERVICIOS   */
+.contenedor-servicios{
+display: flex;
+flex-wrap: wrap; /* si el contenido esta ocupando mucho lugar el proximo texto baje inmediatamente  */
+justify-content: space-around; /* justifica el contenido de servicios por cada bloque */
+color: #fff; /* color blanco para todo el contenido de cada bloque del servicio */
+}
+
+.servicio{
+  width: 24%;
+  padding: 34px 30px 38px 30px; /* padding top 34px padding right 30px padding bottom 38px y padding left 30px  */
+  border-radius: 10px; /* radio del borde estan mas redondeados los cuadros de los servicios*/
+  margin-bottom: 40px; /* margen de cada bottom o cuadros   */
+  position: relative; /* posicion relativo donde las imagenes q stan com sondas dentro del boton de servicios lleguen a su totalidad  */
+}
+
+.servicio h4{
+  font-size: 30px;
+  margin: 0;
+}
+
+.servicio p{
+  margin-bottom: 20px;
+  height: 194px;
+}
+
+.contenedor-servicios .violeta{
+  background: linear-gradient(to top, #5055df, #6d68f3);  /* crea una imágen la cual representa un degradado lineal de colores*/
+  box-shadow: 0 12px 30px 0 rgba(80,85,223, .37);  /* box-shadow añade efectos de sombra alrededor del marco de un elemento. */
+  text-align: justify; /*<!--text-align: justify; permite Justificar todo el parrafo q sta dentro de la clase violeta -->*/
+  }
+
+.contenedor-servicios .celeste{
+  background: linear-gradient(to top, #40a8f9, #5cb8ff); /* crea una imágen la cual representa un degradado lineal de colores*/
+  box-shadow: 0 12px 30px 0 rgba(86,163,222, .3); /* box-shadow añade efectos de sombra alrededor del marco de un elemento. */
+  text-align: justify; /*<!--text-align: justify; permite Justificar todo el parrafo q sta dentro de la clase celeste-->*/
+  }
+
+.ondas{
+position: absolute;
+left: 0; /*posicion izquierda cero*/
+bottom: 0;
+}
+
+.icono{
+float:right; /*flotame q el cntenido hacia la derecha*/
+}
+/* FIN SECCION DE SERVICIOS   */
+
+/*SECCION MIS TRABAJOS*/
+button.owl-prev, button.owl-next {
+    font-size: 40px !important; /*permite que el <> de carousel este un tamaño 40px*/
+}
+
+span {
+    color: #71bcfa;  /*el span es una etiqueta html que no tiene ningun significado semantico es solomente para poner un elemnto dentro de una etiqueta y darle estilos*/
+}
+/*FIN SECCION MIS TRABAJOS*/
+
+/*SECCION POR QUE TRABAJAR CONMIGO*/
+.contenedor-trabajar{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around; /*los elementos se distribuyen uniformemente en la línea con igual espacio a su alrededor*/
+}
+
+#por-que-trabajar .item{
+  width: 28%;
+  text-align: center;
+}
+
+#por-que-trabajar ul li{
+  list-style: none;
+  }
+
+#por-que-trabajar ul li:nth-child(2){ /*estamos llamando al elemnto hijo ejm:ul es el padre y li es el hijo velocidad es elemento hijo, el num 2 es el posicionamiento del orden que esta en index html ejm la img es 1 y velocidad el 2*/
+  font-weight: bold;
+  font-size: 19px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+    }
+
+#por-que-trabajar ul li:nth-child(3){
+  line-height:32px;  /*alto de linea*/
+}
+/*FIN SECCION POR QUE TRABAJAR CONMIGO*/
+
+/*SECCION DE BLOG*/
+#blog .contenido{
+  background: #F9FAFC;
+  text-align: justify;
+}
+
+#blog .contenedor-publicaciones{
+  display: flex;
+  justify-content: space-around;
+  }
+
+#blog .publicacion{
+  width: 30%;
+  box-shadow:1px 1px 14px #ccc;
+}
+
+#blog img { /*blog img es del contenedor div y la img tiene que star completo al 100%*/
+  width: 100%;
+}
+
+#blog .contenido{
+  background: #fff;
+  padding: 20px;
+}
+
+#blog h4{
+  font-size: 23px;
+  margin-bottom: 15px;
+  margin: 0;
+  }
+
+#blog p{
+  color: #5A6169;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+
+#blog a{
+  width: 87px;
+}
+/*FIN SECCION DE BLOG*/
+
+/*SECCION QUE ESPERAS PONER TU PAGINA WEB */
+#que-esperas{/*vamos a llamar toda la seccion*/
+  background: linear-gradient(rgba(84,93,220,.94), rgba(96,171,245,.9)); /*esto linear gradient se puede generar desde el internet*/
+  text-align: center;
+  padding: 50px, 0; /*arriba y abajo tamño de espacio de 50px y a los cotados 0. */
+  margin-top: 40px   /*permite separar de las publicacion de parte de arriba*/
+}
+
+#que-esperas h3{
+  font-size: 23px;
+  color: #fff;
+} /*OJO luego de esto esta el boton de charlemos y eso es igual a todos los bonotes que existen y eso esta en el .contenedor-titulo y lo ponemos el nombre del section ejm: #que-esperas*/
+/*FIN  QUE ESPERAS PONER TU PAGINA WEB */
+
+/*INICIO SECCION CONTACTO */
+#contacto form{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 77%; /*desminuye el tamaño del formulario */
+  margin: auto; /*auto permite centrar automaticamente*/
+}
+/*OJO el boton enviar mensaje del formulario es igual a todos los botones realizados pero es de tipo input submit y respecto a sus estilos es lo mismo para ello ingresar al  .contenedor-titulo y escribir ejem: #contacto input[type="submit"] */
+
+input[type="text"], input[type="email"]{
+  width: 49%;
+  margin-bottom: 15px;
+  padding: 18px 0;
+  border: 0;
+  border-bottom: 1px solid #5cb8ff; /*1px es el tamaño del borde y solid es q sta una linea recta y si fuera dotted seria linea punteado .*/
+  font-size: 17px;
+  }
+
+textarea{
+  padding: 18px 0;
+  border: 0;
+  border-bottom: 1px solid #5cb8ff;
+  font-size: 17px;
+  margin-bottom: 40px;
+  width: 100%; /*width 100% hace que se extiende asta el extremo ejm en el mensaje */
+}
+/*en este parte acerca del boton enviar mensaje se le esta aumentando el tamaño porq en los botones q esta para general es muy pequeño OJO*/
+#contacto input[type="submit"]{
+  width: 166px;
+  margin: auto;
+}
+/*FIN SECCION CONTACTO*/
+
+/*INICIO SECCION CONTACTO INFO*/
+.contacto-info{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.contacto-info img{
+  width: 28px;
+  vertical-align: middle; /*alineamiento vertical al medio*/
+  margin-right: 10px;
+}
+/*FIN SECCION CONTACTO INFO */
+
+/*INICIO DE SECCION DE PIE DE PAGINA  */
+footer{
+  background: #00babe; /* pertenece al color gris de pie de pagina*/
+  padding: 40px 0;
+  text-align: center;   /*para que todo la info este en el centro*/
+  margin-top: 40px;
+}
+
+footer .contenedor{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer img{
+  margin: 0 40px;
+  transform: rotate(0); /*trasnform es para que rote */
+  transition: 0.4s; /*esto es el tiempo q girara*/
+  }
+
+footer img:hover { /*hover es cuando pasas el mouse por enci,a del elemento */
+transform: rotate(360deg); /*360deg eso es q girara 360grados*/
+transition: 0.4s; /*esto es el tiempo q girara*/
+}
+
+footer p{
+  color: #fff;
+  margin-top: 40px; /*margen-top q separa entre los iconos de redes*/
+}
+
+footer a{
+  color: #fff;
+}
+
+footer a:hover {
+  color: #ffce00;
+  transition: 0.5s;  
+}
+
+/*FIN SECCION PIE DE PAGINA */
+
+/*INICIO SECCION WATSAPP */
+#whatsapp { /*# es q esta llamando el id*/
+position: fixed; /*es para q el elemento este fijo en la pantalla */
+top: 80%; /*top 80% indica q la img de wasap este hacia abajo cerca a la esquina y eso es 80% y si fuera 1% estarriba arriba*/
+right: 1%; /*right indica q va a star a la derecha */
+z-index: 30; /*z-index permite q este un elemento por adelante preferible buscar un numero propiado realizando pruebas ejem 30*/
+}
+/*FIN SECCION WATSAPP */
+
+/*INICIO SECCION DE LINK correspondientes de menu*/
+html {
+  scroll-behavior: smooth; /*smooth perimte q el comportamiento del mouse al hacer clic en el menu caso que no tiene el url no pasa nada.*/
+}
+
+#mis-trabajos, #sobre-mi, #por-que-trabajar, #blog, #contacto {
+  padding: 90px 0; /*padding es el tamaño que aumenta,90px arriba y abajo y los costados cero ejm la seccion sobre mi, etc*/
+}
+
+#servicios {
+  padding: 70px 0;
+}
+/*FIN SECCION DE LINK correspondientes */
+
+/*INICIO SECCION MAGEN DE MENU "sacar img de escritorio solo para movil" */
+.menu-icon{
+  display: none; /*display none es para ocultar o eliminar los elementso*/
+}
+/*FIN SECCION IMG DE MENU*/
+
+
+
+
+/* INICIO SECCION RESPONSIVE DESING "Dispositivos moviles" */
+@media (max-width: 800px){/*la pagina se va a ver a los dispositivos q tiene un maximo de 80px de ancho ejem tablets y moviles */
+
+.menu-icon {
+  display: block; /*display bloxk permite habilitar. ejm  la img menu-icon stuvo oculto ahora se podra ver en moviles*/
+  float: right; /*float right es para flotar a la dercha*/
+  width: 40px;
+  height: 35px;
+  margin-top: 15px;
+
+  }
+
+header nav { /*ordenando la posion de menu para movil*/
+position: absolute; /*acomoda el elemento*/
+top: 83px; /*top para q baja*/
+left:  0; /*nivel cero de la izquierda*/
+height: 268px; /*alto fijo de los elemts del menu*/
+background: #00babe; /*el color de menu de movil*/
+width: 100%; /*100% de color de menu de movil*/
+display: none; /*display none es para ocultar ejm los menus de movil*/
+}
+
+header nav ul{
+  flex-direction: column; /*permite q los elemnetos esten uno debajo de otro*/
+  }
+
+header nav ul li{
+  margin-bottom: 15px; /*el tamaño de altura de cada elemto de menu para movil*/
+}
+
+h1{/*tamaño del titulo para movil*/
+  font-size: 44px;
+  }
+
+h2{ /*tamaño del subtitulo para movil*/
+  font-size: 19px;
+}
+
+/*SECCION SOBRE MI MOVIL*/
+#sobre-mi .contenedor-sobremi{
+  flex-direction: column;
+}
+#sobre-mi img{
+  width: 100%;
+}
+#sobre-mi .texto{
+  width: 100%;
+}
+
+/*SECCION SERVICOS MOVIL*/
+.contenedor-servicios {
+  flex-direction: column;
+}
+
+.servicio {
+  width: 82%;
+  padding: 34px 30px 69px 30px;
+}
+
+.icono {
+  margin-top: 23px;
+}
+
+/*SECCION MIS TRABAJOS EN MOVIL*/
+H3{
+  font-size: 43px;
+}
+
+/*SECCION PORQUE TRABAJAR CON MIGO EN MOVIL*/
+.contenedor-trabajar{
+  flex-direction: column;
+}
+
+#por-que-trabajar .item{
+  width: 100%;
+}
+
+.item ul{
+  padding: 0;
+}
+
+/*SECCION BLOG EN  MOVIL*/
+#blog .contenedor-publicaciones {
+  flex-direction: column;
+}
+
+#blog .publicacion {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/*SECCION CONTACTO EN  MOVIL*/
+#contacto form{
+  width: 100%;
+  flex-direction: column;
+}
+
+input[type="text"], input[type="email"]{
+  width: 100%;
+  }
+
+  /*.contacto-info {
+      display: contents; /*display es para uno al lado del otro pero con contents desactiva a display para movil
+      justify-content: center;
+      text-align: center;
+      margin-top: 60px;
+      background-size:100% 100%;
+  }*/
+
+/*SECCION REDES SOCIALES EN  MOVIL*/
+footer img {
+  margin: 0 24px;
+}
+
+}
+/* FIN SECCION RESPONSIVE DESING "Dispositivos moviles" */
+
+/* INICIO SECCION "Dispositivos solo para iPad o tablets" */
+@media (min-width: 600px) and (max-width: 800px )  {
+header {
+  height: 70vh;  /*  height: 70vh comprobado si en verdad funciona la pantalla en ipad*/
+}
+
+/*SECCION SERVICIOS IPAD*/
+.servicio{
+  width: 57%;
+  padding: 34px 30px 69px 30px;
+  margin: auto;
+  margin-bottom: 45px;
+}
+
+/*SECCION BLOG IPAD*/
+#blog .publicacion{
+  width: 71%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+}
+/* FIN SECCION "Dispositivos solo para iPad
+/*FIN CURSO*/
